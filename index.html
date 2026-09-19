@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO: Meta Title e Description -->
+    <title>Rosa di Fiore | Estética & Massoterapia Domiciliar no ABC Paulista</title>
+    <meta name="description" content="Rosa di Fiore por Anne: Drenagem Linfática, Massagem Relaxante, Massagem Modeladora e Argiloterapia no conforto da sua casa em Santo André, São Bernardo e região do ABC. Agende seu horário!">
+    <meta name="keywords" content="Rosa di Fiore, Anne massoterapia, drenagem linfatica domiciliar, massagem relaxante ABC, massagem Santo Andre, massagem Sao Bernardo, argiloterapia corporal, estetica domiciliar">
+    <meta name="author" content="Rosa di Fiore">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://rinaldomontador07-jpg.github.io/rosadifiore/">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://i.postimg.cc/BnCfN7zB/logo.jpg" type="image/jpeg">
+    <link rel="apple-touch-icon" href="https://i.postimg.cc/BnCfN7zB/logo.jpg">
+
+    <!-- Open Graph (WhatsApp, Instagram, Facebook) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Rosa di Fiore | Estética & Bem-estar Domiciliar">
+    <meta property="og:description" content="Autocuidado e equilíbrio sem sair de casa. Atendimento exclusivo de massoterapia e estética no ABC Paulista com Anne. Agende online!">
+    <meta property="og:url" content="https://rinaldomontador07-jpg.github.io/rosadifiore/">
+    <meta property="og:image" content="https://i.postimg.cc/BnCfN7zB/logo.jpg">
+
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- SEO: Schema Markup LocalBusiness (Google Meu Negócio) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HealthAndBeautyBusiness",
+      "name": "Rosa di Fiore - Estética & Bem-estar Domiciliar",
+      "image": "https://i.postimg.cc/BnCfN7zB/logo.jpg",
+      "telephone": "+5511991728723",
+      "url": "https://rinaldomontador07-jpg.github.io/rosadifiore/",
+      "hasMap": "https://share.google/ZFB12v1Z9aBKTwvM3",
+      "areaServed": [
+        "Santo André",
+        "São Bernardo do Campo",
+        "São Caetano do Sul",
+        "Grande ABC Paulista"
+      ],
+      "description": "Atendimento domiciliar exclusivo de massoterapia e terapias corporais no ABC Paulista: Drenagem Linfática, Massagem Relaxante, Massagem Modeladora e Argiloterapia corporal.",
+      "founder": {
+        "@type": "Person",
+        "name": "Anne"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "24",
+        "bestRating": "5"
+      }
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Header / Navegação Principal -->
+    <header id="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a onclick="fecharAgendamento()" style="cursor: pointer;" title="Rosa di Fiore Home">
+                    <img src="https://i.postimg.cc/BnCfN7zB/logo.jpg" alt="Rosa di Fiore Logo" class="logo-img">
+                    <div class="logo-brand">
+                        <span class="brand-title">Rosa di Fiore</span>
+                        <span class="brand-sub">Estética & Bem-estar</span>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Botão Menu Mobile -->
+            <button class="menu-toggle" id="mobile-menu-btn" aria-label="Abrir Menu de Navegação">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- Links de Navegação (Página Única) -->
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li><a onclick="fecharAgendamento(); document.getElementById('home').scrollIntoView();" style="cursor: pointer;">Home</a></li>
+                    <li><a onclick="fecharAgendamento(); document.getElementById('sobre').scrollIntoView();" style="cursor: pointer;">Sobre</a></li>
+                    <li><a onclick="fecharAgendamento(); document.getElementById('servicos').scrollIntoView();" style="cursor: pointer;">Serviços</a></li>
+                    <li><a onclick="fecharAgendamento(); document.getElementById('como-funciona').scrollIntoView();" style="cursor: pointer;">Como Funciona</a></li>
+                    <li><a onclick="fecharAgendamento(); document.getElementById('avaliacoes').scrollIntoView();" style="cursor: pointer;">Avaliações</a></li>
+                    <li><a onclick="fecharAgendamento(); document.getElementById('contato').scrollIntoView();" style="cursor: pointer;">Contato</a></li>
+                    <li class="mobile-only" style="margin-top: 10px;">
+                        <a href="https://wa.me/5511991728723" target="_blank" class="btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp</a>
+                    </li>
+                    <li class="mobile-only" style="margin-top: 6px;">
+                        <a onclick="abrirAgendamento()" class="btn-primary" style="cursor: pointer;"><i class="fa-solid fa-calendar-check"></i> Agendar Sessão</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Botões Desktop -->
+            <div class="nav-cta-group desktop-only">
+                <a href="https://wa.me/5511991728723" target="_blank" class="btn-whatsapp" title="Falar no WhatsApp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                <a onclick="abrirAgendamento()" class="btn-primary" style="cursor: pointer;" title="Agendar Online"><i class="fa-solid fa-calendar-check"></i> Agendar Online</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-content">
+
+        <!-- CONTEÚDO PRINCIPAL (LANDING PAGE) -->
+        <div id="conteudo-principal">
+
+            <!-- Hero Section -->
+            <section id="home" class="hero">
+                <div class="hero-overlay"></div>
+                <div class="container hero-content">
+                    <div class="hero-badge">
+                        <i class="fa-solid fa-spa"></i> Atendimento Domiciliar no ABC Paulista
+                    </div>
+                    <h1 class="hero-title">Estética e Massoterapia no Conforto do Seu Lar</h1>
+                    <p class="hero-subtitle">
+                        A experiência completa de relaxamento e cuidado que vai até você em Santo André, São Bernardo e região do ABC.<br>
+                        Técnicas manuais aplicadas com presença, intenção e acolhimento genuíno.
+                    </p>
+                    <div class="hero-actions">
+                        <a onclick="abrirAgendamento()" class="btn-light" style="cursor: pointer;">
+                            <i class="fa-solid fa-calendar-check"></i> Agendar Horário Online
+                        </a>
+                        <a href="https://wa.me/5511991728723" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp
+                        </a>
+                    </div>
+                    
+                    <div class="hero-features">
+                        <div class="hero-feature-item">
+                            <i class="fa-solid fa-house-chimney-heart"></i>
+                            <span>Atendimento no conforto de casa</span>
+                        </div>
+                        <div class="hero-feature-item">
+                            <i class="fa-solid fa-certificate"></i>
+                            <span>Profissional técnica certificada</span>
+                        </div>
+                        <div class="hero-feature-item">
+                            <i class="fa-solid fa-clock"></i>
+                            <span>Pontualidade e biossegurança</span>
+                        </div>
+                        <div class="hero-feature-item">
+                            <i class="fa-solid fa-star"></i>
+                            <span>Avaliação 5 Estrelas no Google</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sobre Section -->
+            <section id="sobre" class="sobre">
+                <div class="container sobre-container">
+                    <div class="sobre-img">
+                        <img src="https://images.unsplash.com/photo-1611558709798-e009c8fd7706?auto=format&fit=crop&w=800&q=80" alt="Anne Rosa di Fiore atendimento domiciliar" loading="lazy">
+                        <div class="badge-float">Cuidado<br>Real</div>
+                    </div>
+                    <div class="sobre-text">
+                        <span class="subtitle">A PROFISSIONAL</span>
+                        <h2>Prazer, sou Anne.</h2>
+                        <p>A Rosa di Fiore nasceu de uma crença simples: o autocuidado não deve ser um luxo inatingível ou mais uma tarefa estressante na sua agenda lotada.</p>
+                        <p>Com formação técnica certificada e especialização em terapias corporais, estruturei um atendimento que leva a estrutura de uma clínica diretamente para o seu lar em Santo André, São Bernardo e região do ABC.</p>
+                        
+                        <ul class="sobre-lista">
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                <div><strong>Missão:</strong> Transformar o autocuidado em uma prática contínua, prazerosa e acessível.</div>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                <div><strong>Valores:</strong> Acolhimento genuíno, excelência técnica, ética profissional e pontualidade rigorosa.</div>
+                            </li>
+                        </ul>
+
+                        <div class="sobre-destaques">
+                            <div class="destaque-card">
+                                <h4><i class="fa-solid fa-pump-medical" style="color: var(--accent); margin-right: 6px;"></i> Maca & Materiais</h4>
+                                <p>Levo toda a estrutura necessária: maca confortável, lençóis esterilizados e produtos de alta qualidade.</p>
+                            </div>
+                            <div class="destaque-card">
+                                <h4><i class="fa-solid fa-location-dot" style="color: var(--accent); margin-right: 6px;"></i> Foco no ABC</h4>
+                                <p>Atendimento planejado para oferecer flexibilidade e tranquilidade aos moradores da região.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Serviços Section (SEM PREÇOS) -->
+            <section id="servicos" class="servicos bg-light">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="subtitle">NOSSOS PROTOCOLOS</span>
+                        <h2>Serviços & Tratamentos</h2>
+                        <p>Técnicas manuais aplicadas com intenção e presença. Os atendimentos incluem deslocamento na região de cobertura principal do ABC.</p>
+                    </div>
+
+                    <div class="services-grid">
+                        <!-- Serviço 1: Drenagem Linfática -->
+                        <div class="service-card">
+                            <div class="service-header">
+                                <h3>Drenagem Linfática</h3>
+                                <span class="duration"><i class="fa-regular fa-clock"></i> 1h20</span>
+                            </div>
+                            <p class="service-desc">
+                                Técnica manual de estimulação do sistema linfático. Ideal para retenção de líquido, inchaço, sensação de pernas pesadas e relaxamento profundo do organismo.
+                            </p>
+                            <ul class="service-beneficios">
+                                <li><i class="fa-solid fa-check"></i> Redução visível de edemas e retenção</li>
+                                <li><i class="fa-solid fa-check"></i> Estímulo da circulação e eliminação de toxinas</li>
+                                <li><i class="fa-solid fa-check"></i> Sensação de leveza e bem-estar corporal</li>
+                            </ul>
+                            <div class="service-footer">
+                                <a href="https://wa.me/5511991728723?text=Ol%C3%A1%20Anne!%20Gostaria%20de%20tirar%20d%C3%BAvidas%20sobre%20a%20Drenagem%20Linf%C3%A1tica" target="_blank" class="btn-whatsapp">
+                                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                                </a>
+                                <a onclick="abrirAgendamento('Drenagem Linfática')" class="btn-primary" style="cursor: pointer;">
+                                    <i class="fa-solid fa-calendar-check"></i> Agendar
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Serviço 2: Massagem Relaxante -->
+                        <div class="service-card">
+                            <div class="service-header">
+                                <h3>Massagem Relaxante</h3>
+                                <span class="duration"><i class="fa-regular fa-clock"></i> 1h10</span>
+                            </div>
+                            <p class="service-desc">
+                                Manobras suaves e contínuas para redução do estresse e tensão muscular acumulada. Um convite especial para desconectar da rotina acelerada do ABC.
+                            </p>
+                            <ul class="service-beneficios">
+                                <li><i class="fa-solid fa-check"></i> Alívio de nós de tensão nas costas e pescoço</li>
+                                <li><i class="fa-solid fa-check"></i> Liberação de endorfinas e relaxamento mental</li>
+                                <li><i class="fa-solid fa-check"></i> Melhora significativa na qualidade do sono</li>
+                            </ul>
+                            <div class="service-footer">
+                                <a href="https://wa.me/5511991728723?text=Ol%C3%A1%20Anne!%20Gostaria%20de%20tirar%20d%C3%BAvidas%20sobre%20a%20Massagem%20Relaxante" target="_blank" class="btn-whatsapp">
+                                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                                </a>
+                                <a onclick="abrirAgendamento('Massagem Relaxante')" class="btn-primary" style="cursor: pointer;">
+                                    <i class="fa-solid fa-calendar-check"></i> Agendar
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Serviço 3: Massagem Modeladora -->
+                        <div class="service-card">
+                            <div class="service-header">
+                                <h3>Massagem Modeladora</h3>
+                                <span class="duration"><i class="fa-regular fa-clock"></i> 1h20</span>
+                            </div>
+                            <p class="service-desc">
+                                Técnica com movimentos vigorosos e ritmados focada na estimulação da circulação periférica, melhora do contorno corporal e oxigenação celular da pele.
+                            </p>
+                            <ul class="service-beneficios">
+                                <li><i class="fa-solid fa-check"></i> Estimulação do metabolismo local</li>
+                                <li><i class="fa-solid fa-check"></i> Melhora do tônus e aspecto da celulite</li>
+                                <li><i class="fa-solid fa-check"></i> Modelação harmoniosa das curvas</li>
+                            </ul>
+                            <div class="service-footer">
+                                <a href="https://wa.me/5511991728723?text=Ol%C3%A1%20Anne!%20Gostaria%20de%20tirar%20d%C3%BAvidas%20sobre%20a%20Massagem%20Modeladora" target="_blank" class="btn-whatsapp">
+                                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                                </a>
+                                <a onclick="abrirAgendamento('Massagem Modeladora')" class="btn-primary" style="cursor: pointer;">
+                                    <i class="fa-solid fa-calendar-check"></i> Agendar
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Serviço 4: Argiloterapia Corporal -->
+                        <div class="service-card has-badge">
+                            <div class="card-badge">Experiência</div>
+                            <div class="service-header">
+                                <h3>Argiloterapia Corporal</h3>
+                                <span class="duration"><i class="fa-regular fa-clock"></i> 1h30</span>
+                            </div>
+                            <p class="service-desc">
+                                Um ritual completo de desintoxicação e revitalização. Aplicação corporal de argila rica em oligoelementos e minerais, tempo de repouso restaurador e hidratação final.
+                            </p>
+                            <ul class="service-beneficios">
+                                <li><i class="fa-solid fa-check"></i> Desintoxicação profunda e remineralização dérmica</li>
+                                <li><i class="fa-solid fa-check"></i> Reposição de oligoelementos naturais</li>
+                                <li><i class="fa-solid fa-check"></i> Pele macia, nutrida e profundamente hidratada</li>
+                            </ul>
+                            <div class="service-footer">
+                                <a href="https://wa.me/5511991728723?text=Ol%C3%A1%20Anne!%20Gostaria%20de%20tirar%20d%C3%BAvidas%20sobre%20a%20Argiloterapia%20Corporal" target="_blank" class="btn-whatsapp">
+                                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                                </a>
+                                <a onclick="abrirAgendamento('Argiloterapia Corporal')" class="btn-primary" style="cursor: pointer;">
+                                    <i class="fa-solid fa-calendar-check"></i> Agendar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Como Funciona Section -->
+            <section id="como-funciona" class="como-funciona">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="subtitle">PRATICIDADE & CONFORTO</span>
+                        <h2>Como Funciona o Atendimento Domiciliar</h2>
+                        <p>Transformamos a sua casa em um ambiente acolhedor de clínica e spa, sem que você enfrente trânsito ou filas.</p>
+                    </div>
+
+                    <div class="passos-grid">
+                        <div class="passo-card">
+                            <div class="passo-num">1</div>
+                            <h3>Escolha seu Protocolo</h3>
+                            <p>Selecione a terapia desejada e reserve seu dia e horário pelo nosso sistema de agendamento online ou diretamente no WhatsApp.</p>
+                        </div>
+                        <div class="passo-card">
+                            <div class="passo-num">2</div>
+                            <h3>Levamos Toda a Estrutura</h3>
+                            <p>Anne comparece na sua residência no horário combinado, levando maca própria esterilizada, lençóis descartáveis, óleos vegetais e música ambiente.</p>
+                        </div>
+                        <div class="passo-card">
+                            <div class="passo-num">3</div>
+                            <h3>Relaxe sem Sair do Lar</h3>
+                            <p>Aproveite sua sessão com tranquilidade e, ao finalizar, continue descansando no aconchego do seu próprio espaço, sem pressa nem estresse.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Avaliações Google Section -->
+            <section id="avaliacoes" class="avaliacoes">
+                <div class="container" style="text-align: center;">
+                    <div class="google-badge-box">
+                        <i class="fa-brands fa-google google-icon"></i>
+                        <div class="google-rating-info">
+                            <div>
+                                <span class="google-stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                                <span class="google-score">5.0</span>
+                            </div>
+                            <span class="google-count">Avaliações verificadas no Google</span>
+                        </div>
+                    </div>
+
+                    <div class="section-header">
+                        <span class="subtitle">DEPOIMENTOS REAIS</span>
+                        <h2>O Que Nossas Clientes Dizem</h2>
+                        <p>O carinho e a satisfação de quem já vivenciou o atendimento domiciliar da Rosa di Fiore.</p>
+                    </div>
+
+                    <div class="reviews-grid">
+                        <div class="review-card">
+                            <div>
+                                <div class="review-stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="review-text">
+                                    "O atendimento da Anne é simplesmente impecável! A pontualidade e o cuidado com cada detalhe, trazendo a maca e tudo limpo e higienizado para minha casa me surpreendeu. A massagem relaxante me renovou por completo!"
+                                </p>
+                            </div>
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">CR</div>
+                                <div class="reviewer-details">
+                                    <h4>Camila Rocha</h4>
+                                    <span>Santo André - SP</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="review-card">
+                            <div>
+                                <div class="review-stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="review-text">
+                                    "Fiz a drenagem linfática e a sensação de leveza nas pernas foi imediata. A Anne é extremamente atenciosa, técnica e cuidadosa. A facilidade de ser atendida em casa faz toda a diferença na minha rotina!"
+                                </p>
+                            </div>
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">FS</div>
+                                <div class="reviewer-details">
+                                    <h4>Fernanda Silveira</h4>
+                                    <span>São Bernardo do Campo - SP</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="review-card">
+                            <div>
+                                <div class="review-stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="review-text">
+                                    "A Argiloterapia Corporal é uma experiência maravilhosa! Minha pele ficou incrivelmente hidratada e sedosa. Profissional pontual, ética e dedicada. Já virei cliente fiel da Rosa di Fiore."
+                                </p>
+                            </div>
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">JM</div>
+                                <div class="reviewer-details">
+                                    <h4>Juliana Mendes</h4>
+                                    <span>São Caetano do Sul - SP</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="google-cta-box">
+                        <a href="https://g.page/r/CS71hcORx3NCEBM/review" target="_blank" rel="noopener noreferrer" class="btn-google-review">
+                            <i class="fa-solid fa-star" style="color: var(--star-color);"></i>
+                            <span>Deixar Avaliação no Google</span>
+                        </a>
+                        <a href="https://share.google/ZFB12v1Z9aBKTwvM3" target="_blank" rel="noopener noreferrer" class="btn-google-review">
+                            <i class="fa-brands fa-google" style="color: var(--google-color);"></i>
+                            <span>Ver Perfil da Empresa no Google</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contato & Cobertura Section -->
+            <section id="contato" class="contato bg-light">
+                <div class="container">
+                    <div class="contato-wrapper">
+                        <div class="contato-info">
+                            <span class="subtitle">FALE CONOSCO</span>
+                            <h3>Estamos Prontos para Cuidar de Você</h3>
+                            <p>Entre em contato para esclarecer dúvidas, consultar disponibilidades personalizadas ou agendar sua sessão de estética e massoterapia.</p>
+                            
+                            <div class="contato-itens">
+                                <div class="contato-item">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                    <div>
+                                        <h4>WhatsApp Oficial</h4>
+                                        <a href="https://wa.me/5511991728723" target="_blank" rel="noopener noreferrer">(11) 99172-8723</a>
+                                    </div>
+                                </div>
+                                <div class="contato-item">
+                                    <i class="fa-brands fa-instagram"></i>
+                                    <div>
+                                        <h4>Instagram</h4>
+                                        <a href="https://www.instagram.com/rosadifiore.spazio/" target="_blank" rel="noopener noreferrer">@rosadifiore.spazio</a>
+                                    </div>
+                                </div>
+                                <div class="contato-item">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <div>
+                                        <h4>Horário de Atendimento</h4>
+                                        <span>Segunda a Sábado, das 09h às 19h</span>
+                                    </div>
+                                </div>
+                                <div class="contato-item">
+                                    <i class="fa-brands fa-google"></i>
+                                    <div>
+                                        <h4>Google Meu Negócio</h4>
+                                        <a href="https://share.google/ZFB12v1Z9aBKTwvM3" target="_blank" rel="noopener noreferrer">Perfil Oficial da Empresa</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a onclick="abrirAgendamento()" class="btn-primary" style="cursor: pointer;">
+                                <i class="fa-solid fa-calendar-check"></i> Abrir Agendamento Online
+                            </a>
+                        </div>
+
+                        <div class="cobertura-box">
+                            <h4><i class="fa-solid fa-map-location-dot" style="color: var(--accent); margin-right: 8px;"></i> Região de Cobertura</h4>
+                            <p>Atendimento domiciliar exclusivo com deslocamento incluso nas principais cidades do ABC Paulista:</p>
+                            
+                            <div class="cidades-tags">
+                                <span class="cidade-tag"><i class="fa-solid fa-check"></i> Santo André</span>
+                                <span class="cidade-tag"><i class="fa-solid fa-check"></i> São Bernardo do Campo</span>
+                                <span class="cidade-tag"><i class="fa-solid fa-check"></i> São Caetano do Sul</span>
+                                <span class="cidade-tag"><i class="fa-solid fa-check"></i> Bairros Vizinhos do ABC</span>
+                            </div>
+
+                            <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 15px;">
+                                <i class="fa-solid fa-info-circle"></i> Levamos maca profissional e materiais esterilizados até o seu condomínio ou residência com total segurança e pontualidade.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+        <!-- FIM DO CONTEÚDO PRINCIPAL -->
+
+        <!-- SEÇÃO DE AGENDAMENTO EXCLUSIVA (ESTILO SPA / MALU ARAÚJO) -->
+        <section id="agendamento" class="agendamento">
+            <div class="container">
+                <div class="section-header">
+                    <span class="subtitle">RESERVE SEU HORÁRIO</span>
+                    <h2>Agende sua Sessão com a Anne</h2>
+                    <p>Selecione o serviço e a data para visualizar os horários disponíveis em tempo real (09:00 - 18:00).</p>
+                </div>
+
+                <div class="agendamento-container">
+                    <form id="form-agendamento">
+                        <div class="campo">
+                            <label for="nome"><i class="fa-regular fa-user" style="margin-right: 6px;"></i> Nome Completo</label>
+                            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="whatsapp"><i class="fa-brands fa-whatsapp" style="margin-right: 6px;"></i> Seu WhatsApp</label>
+                            <input type="tel" id="whatsapp" name="whatsapp" placeholder="(11) 99999-9999" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="servico"><i class="fa-solid fa-spa" style="margin-right: 6px;"></i> Serviço Desejado</label>
+                            <select id="servico" name="servico" required>
+                                <option value="">Selecione uma opção...</option>
+                                <option value="Drenagem Linfática">Drenagem Linfática (1h20)</option>
+                                <option value="Massagem Relaxante">Massagem Relaxante (1h10)</option>
+                                <option value="Massagem Modeladora">Massagem Modeladora (1h20)</option>
+                                <option value="Argiloterapia Corporal">Argiloterapia Corporal (1h30)</option>
+                            </select>
+                        </div>
+
+                        <div class="campo">
+                            <label for="data"><i class="fa-regular fa-calendar" style="margin-right: 6px;"></i> Data da Sessão</label>
+                            <input type="date" id="data" name="data" required>
+                        </div>
+                        
+                        <!-- SELETOR DINÂMICO DE HORÁRIOS (INTEGRAÇÃO CRM GOOGLE APPS SCRIPT) -->
+                        <div class="campo">
+                            <label><i class="fa-regular fa-clock" style="margin-right: 6px;"></i> Horários Disponíveis (09:00 - 18:00)</label>
+                            <div id="filtro-aviso" class="aviso-filtro">
+                                <i class="fa-solid fa-circle-info"></i> Selecione o serviço e a data acima para exibir os horários disponíveis.
+                            </div>
+                            <div id="grade-horarios" class="horarios-grid" style="display: none;"></div>
+                            <input type="hidden" id="horario-selecionado" name="horario" required>
+                        </div>
+
+                        <!-- MENSAGEM DE ERRO/ALERTA -->
+                        <div id="msg-erro" style="color: #d9534f; font-size: 0.92rem; margin-bottom: 16px; display: none; text-align: center; font-weight: 600;"></div>
+
+                        <button type="submit" id="btn-submit">
+                            <i class="fa-solid fa-check"></i> Confirmar Agendamento
+                        </button>
+                        
+                        <a onclick="fecharAgendamento()" class="btn-voltar">
+                            <i class="fa-solid fa-arrow-left"></i> Voltar para a página inicial
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <ul>
+                    <li><a onclick="fecharAgendamento(); document.getElementById('home').scrollIntoView();" style="cursor: pointer;">Home</a></li>
+                    <li><a onclick="fecharAgendamento(); document.getElementById('sobre').scrollIntoView();" style="cursor: pointer;">Sobre</a></li>
+                    <li><a onclick="fecharAgendamento(); document.getElementById('servicos').scrollIntoView();" style="cursor: pointer;">Serviços</a></li>
+                    <li><a onclick="fecharAgendamento(); document.getElementById('como-funciona').scrollIntoView();" style="cursor: pointer;">Como Funciona</a></li>
+                    <li><a onclick="fecharAgendamento(); document.getElementById('avaliacoes').scrollIntoView();" style="cursor: pointer;">Avaliações</a></li>
+                    <li><a onclick="fecharAgendamento(); document.getElementById('contato').scrollIntoView();" style="cursor: pointer;">Contato</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <h2>Rosa di Fiore</h2>
+                    <p>Estética & Bem-estar Domiciliar com Anne</p>
+                    <p style="font-size: 0.85rem; color: #ebdce6; margin-top: 4px;">
+                        <i class="fa-solid fa-location-dot"></i> Atendimento exclusivo no ABC Paulista: Santo André, São Bernardo e região
+                    </p>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="https://share.google/ZFB12v1Z9aBKTwvM3" target="_blank" rel="noopener noreferrer" class="google-icon-btn" aria-label="Google Meu Negócio" title="Perfil Google"><i class="fa-brands fa-google"></i></a>
+                    <a href="https://g.page/r/CS71hcORx3NCEBM/review" target="_blank" rel="noopener noreferrer" aria-label="Avaliar no Google" title="Avaliar no Google"><i class="fa-solid fa-star" style="color: #fbbc04;"></i></a>
+                    <a href="https://www.instagram.com/rosadifiore.spazio/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/5511991728723" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                
+                <div class="footer-copy">
+                    <p>&copy; 2026 Rosa di Fiore. Todos os direitos reservados.</p>
+                    <p>Design refinado & agendamento inteligente</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÕES FLUTUANTES: AGENDAR ONLINE E WHATSAPP -->
+    <a onclick="abrirAgendamento()" class="agendar-float" title="Agendar Horário Online">
+        <i class="fa-solid fa-calendar-check"></i> <span>Agendar Online</span>
+    </a>
+    <a href="https://wa.me/5511991728723" target="_blank" class="whatsapp-float" aria-label="Falar no WhatsApp" title="Falar no WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts da Aplicação -->
+    <script src="script.js"></script>
+</body>
+</html>

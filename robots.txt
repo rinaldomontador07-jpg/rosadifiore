@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rinaldomontador07-jpg.github.io/rosadifiore/sitemap.xml

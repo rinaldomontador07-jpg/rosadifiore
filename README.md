@@ -9,8 +9,8 @@ A **Rosa di Fiore** oferece serviços exclusivos de terapias manuais e estética
 ### 🌟 Destaques & Funcionalidades
 - **Página Única (SPA)**: Navegação fluida por âncoras (Home, Sobre, Serviços, Como Funciona, Avaliações, Contato e Agendamento).
 - **Agendamento Inteligente**: Consulta em tempo real de horários ocupados/disponíveis integrada via API ao Google Apps Script CRM da Anne (`https://script.google.com/macros/s/AKfycbyifTvjxTwbB2Bd5WVHL_Uu2IPtlRTEDK64DmK27fDdkSZ6o5TrO-gKD6jFNire439I/exec`).
-- **Sem Exibição de Preços**: Protocolos apresentados com foco em benefícios, acolhimento e duração (Drenagem Linfática, Massagem Relaxante, Massagem Modeladora e Argiloterapia Corporal).
-- **Confirmação via WhatsApp**: Ao submeter o agendamento, os dados são registrados no CRM e o cliente é redirecionado ao WhatsApp oficial `(11) 99172-8723` com a mensagem pré-preenchida.
+- **Sem Exibição de Preços**: Protocolos apresentados com foco em benefícios, acolhimento e duração (Drenagem Linfática 30-60 min, Massagem Relaxante 60 min, Massagem Modeladora 30-60 min e Argiloterapia Facial 40 min).
+- **Confirmação via WhatsApp**: Ao submeter o agendamento, os dados são registrados no CRM e o cliente é redirecionado ao WhatsApp oficial `(11) 94705-0565` com a mensagem pré-preenchida.
 - **Avaliações & Presença Google**: Links diretos para avaliação no Google e perfil da empresa no Google Meu Negócio.
 - **Identidade Visual Refinada**: Paleta elegante em tons de vinho, marsala, blush e off-white, com tipografia Lora e Montserrat.
 - **Otimização para Busca (SEO Local)**: Marcação estruturada Schema.org (JSON-LD), `sitemap.xml` e `robots.txt`.

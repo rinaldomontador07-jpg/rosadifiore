@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const partesData = data.split("-");
             const dataFormatada = partesData.length === 3 ? `${partesData[2]}/${partesData[1]}/${partesData[0]}` : data;
 
-            const mensagemWhatsApp = `Olá Anne! Gostaria de confirmar meu agendamento pelo site Rosa di Fiore:
+            const mensagemWhatsApp = `Olá! Gostaria de confirmar meu agendamento pelo site Rosa di Fiore:
 *Nome:* ${nome}
 *Serviço:* ${servico}
 *Data:* ${dataFormatada}
@@ -324,7 +324,7 @@ function finalizarAgendamento(sucesso, mensagem) {
         btnSubmit.innerHTML = '<i class="fa-solid fa-check"></i> Confirmar Agendamento';
     }
 
-    const waLink = `https://wa.me/5511991728723?text=${encodeURIComponent(mensagem)}`;
+    const waLink = `https://wa.me/5511947050565?text=${encodeURIComponent(mensagem)}`;
     window.open(waLink, "_blank");
 
     const formAgendamento = document.getElementById("form-agendamento");

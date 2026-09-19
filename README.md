@@ -4,7 +4,7 @@ Website oficial em página única (Single Page Application) com sistema integrad
 
 ## 🌸 Sobre o Projeto
 
-A **Rosa di Fiore** oferece serviços exclusivos de terapias manuais e estética domiciliar no Grande ABC Paulista (Santo André, São Bernardo do Campo, São Caetano do Sul e região).
+A **Rosa di Fiore** oferece serviços exclusivos de terapias manuais e estética domiciliar no Grande ABC Paulista (Santo André, São Bernardo do Campo, São Caetano do Sul, Diadema) e São Paulo.
 
 ### 🌟 Destaques & Funcionalidades
 - **Página Única (SPA)**: Navegação fluida por âncoras (Home, Sobre, Serviços, Como Funciona, Avaliações, Contato e Agendamento).

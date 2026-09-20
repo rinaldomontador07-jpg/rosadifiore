@@ -193,9 +193,9 @@ function expandirHorariosOcupados(dados) {
             return;
         }
 
-        const statusStr = String(item.Status || "").trim().toUpperCase();
-        // Considera apenas agendamentos ativos ou pendentes
-        const statusValido = statusStr === "OK" || statusStr === "CONFIRMADO" || statusStr === "APROVADO" || statusStr === "SIM" || statusStr === "PENDENTE" || statusStr === "";
+        // Bloqueia APENAS quando o status for confirmado com OK (ou Confirmado/Aprovado/Sim)
+        // Enquanto estiver "Pendente", o horário continua liberado para outros clientes
+        const statusValido = statusStr === "OK" || statusStr === "CONFIRMADO" || statusStr === "APROVADO" || statusStr === "SIM";
         if (!statusValido) return;
 
         const horarioStr = String(item.Horario || "").trim();

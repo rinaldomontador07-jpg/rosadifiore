@@ -182,9 +182,10 @@ function horaParaMinutos(horaStr) {
 // Expande horários ocupados suportando intervalos (ex: "09:00 - 11:00", "09:00 - 12h", ou coluna Termino)
 function expandirHorariosOcupados(dados) {
     const ocupados = new Set();
-    if (!Array.isArray(dados)) return [];
+    if (!dados) return [];
+    const lista = Array.isArray(dados) ? dados : [dados];
 
-    dados.forEach((item) => {
+    lista.forEach((item) => {
         if (!item) return;
 
         if (typeof item !== "object") {
@@ -193,10 +194,11 @@ function expandirHorariosOcupados(dados) {
             return;
         }
 
+        const statusStr = String(item.Status || "").trim().toUpperCase();
         // Bloqueia APENAS quando o status for confirmado com OK (ou Confirmado/Aprovado/Sim)
         // Enquanto estiver "Pendente", o horário continua liberado para outros clientes
         const statusValido = statusStr === "OK" || statusStr === "CONFIRMADO" || statusStr === "APROVADO" || statusStr === "SIM";
-        if (!statusValido) return;
+        if (!statusValido || statusStr === "PENDENTE") return;
 
         const horarioStr = String(item.Horario || "").trim();
         const terminoStr = String(item.Termino || item.Fim || item.Horario_Fim || item.Termino_Horario || "").trim();

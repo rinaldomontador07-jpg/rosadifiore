@@ -157,25 +157,29 @@ const horariosBase = [
     "15:00", "15:30", "16:00", "16:30", "17:00", "17:30", "18:00"
 ];
 
-// Converte qualquer formato ("09:00:00", "09:00", "9:00") para "09:00"
+// Converte qualquer formato ("09:00:00", "09:00", "9:00", "9h", "9h30") para "09:00"
 function normalizarHora(horaStr) {
     if (!horaStr) return "";
-    const match = String(horaStr).match(/(\d{1,2}):(\d{2})/);
+    const match = String(horaStr).match(/(\d{1,2})(?::(\d{2})|h(\d{2})?|h)?/i);
     if (match) {
-        return `${match[1].padStart(2, "0")}:${match[2]}`;
+        const h = match[1].padStart(2, "0");
+        const m = (match[2] || match[3] || "00").padStart(2, "0");
+        return `${h}:${m}`;
     }
     return String(horaStr).trim();
 }
 
-// Converte string de hora ("09:30") para minutos a partir da meia-noite (ex: 570)
+// Converte string de hora ("09:30", "12h", "11", "9:00") para minutos a partir da meia-noite (ex: 570)
 function horaParaMinutos(horaStr) {
     if (!horaStr) return -1;
-    const match = String(horaStr).match(/(\d{1,2}):(\d{2})/);
+    const match = String(horaStr).match(/(\d{1,2})(?::(\d{2})|h(\d{2})?|h)?/i);
     if (!match) return -1;
-    return parseInt(match[1], 10) * 60 + parseInt(match[2], 10);
+    const h = parseInt(match[1], 10);
+    const m = parseInt(match[2] || match[3] || "0", 10);
+    return h * 60 + m;
 }
 
-// Expande horários ocupados suportando intervalos (ex: "09:00 - 11:00" ou coluna Termino)
+// Expande horários ocupados suportando intervalos (ex: "09:00 - 11:00", "09:00 - 12h", ou coluna Termino)
 function expandirHorariosOcupados(dados) {
     const ocupados = new Set();
     if (!Array.isArray(dados)) return [];
@@ -200,8 +204,8 @@ function expandirHorariosOcupados(dados) {
         let inicioMin = -1;
         let fimMin = -1;
 
-        // 1. Verifica se há intervalo explícito na célula de Horário: "09:00 - 11:00", "09:00 às 11:00", "09:00 até 11:00"
-        const rangeMatch = horarioStr.match(/(\d{1,2}:\d{2})\s*(?:-|–|—|às|as|até|ate|a)\s*(\d{1,2}:\d{2})/i);
+        // 1. Verifica se há intervalo explícito na célula de Horário: "09:00 - 11:00", "09:00 - 12h", "09:00 às 11:00"
+        const rangeMatch = horarioStr.match(/(\d{1,2}(?::\d{2}|h\d{2}|h)?)\s*(?:-|–|—|às|as|até|ate|a)\s*(\d{1,2}(?::\d{2}|h\d{2}|h)?)/i);
         if (rangeMatch) {
             inicioMin = horaParaMinutos(rangeMatch[1]);
             fimMin = horaParaMinutos(rangeMatch[2]);

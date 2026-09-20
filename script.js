@@ -167,6 +167,74 @@ function normalizarHora(horaStr) {
     return String(horaStr).trim();
 }
 
+// Converte string de hora ("09:30") para minutos a partir da meia-noite (ex: 570)
+function horaParaMinutos(horaStr) {
+    if (!horaStr) return -1;
+    const match = String(horaStr).match(/(\d{1,2}):(\d{2})/);
+    if (!match) return -1;
+    return parseInt(match[1], 10) * 60 + parseInt(match[2], 10);
+}
+
+// Expande horários ocupados suportando intervalos (ex: "09:00 - 11:00" ou coluna Termino)
+function expandirHorariosOcupados(dados) {
+    const ocupados = new Set();
+    if (!Array.isArray(dados)) return [];
+
+    dados.forEach((item) => {
+        if (!item) return;
+
+        if (typeof item !== "object") {
+            const h = normalizarHora(item);
+            if (h) ocupados.add(h);
+            return;
+        }
+
+        const statusStr = String(item.Status || "").trim().toUpperCase();
+        // Considera apenas agendamentos ativos ou pendentes
+        const statusValido = statusStr === "OK" || statusStr === "CONFIRMADO" || statusStr === "APROVADO" || statusStr === "SIM" || statusStr === "PENDENTE" || statusStr === "";
+        if (!statusValido) return;
+
+        const horarioStr = String(item.Horario || "").trim();
+        const terminoStr = String(item.Termino || item.Fim || item.Horario_Fim || item.Termino_Horario || "").trim();
+
+        let inicioMin = -1;
+        let fimMin = -1;
+
+        // 1. Verifica se há intervalo explícito na célula de Horário: "09:00 - 11:00", "09:00 às 11:00", "09:00 até 11:00"
+        const rangeMatch = horarioStr.match(/(\d{1,2}:\d{2})\s*(?:-|–|—|às|as|até|ate|a)\s*(\d{1,2}:\d{2})/i);
+        if (rangeMatch) {
+            inicioMin = horaParaMinutos(rangeMatch[1]);
+            fimMin = horaParaMinutos(rangeMatch[2]);
+        } else if (terminoStr) {
+            // 2. Se houver coluna de Término / Fim preenchida
+            inicioMin = horaParaMinutos(horarioStr);
+            fimMin = horaParaMinutos(terminoStr);
+        } else {
+            // 3. Apenas horário inicial (ex: "09:00")
+            inicioMin = horaParaMinutos(horarioStr);
+            if (inicioMin >= 0) {
+                // Bloqueia preventivamente a janela de 1 hora para evitar sobreposição imediata
+                fimMin = inicioMin + 60;
+            }
+        }
+
+        if (inicioMin >= 0 && fimMin > inicioMin) {
+            // Bloqueia todos os slots da grade que caiam no intervalo [inicioMin, fimMin)
+            horariosBase.forEach((slot) => {
+                const slotMin = horaParaMinutos(slot);
+                if (slotMin >= inicioMin && slotMin < fimMin) {
+                    ocupados.add(slot);
+                }
+            });
+        } else if (inicioMin >= 0) {
+            const h = normalizarHora(horarioStr);
+            if (h) ocupados.add(h);
+        }
+    });
+
+    return Array.from(ocupados);
+}
+
 // Consulta em tempo real na planilha e renderiza os horários disponíveis e bloqueados
 function atualizarHorariosDisponiveis() {
     const selectServico = document.getElementById("servico");
@@ -204,21 +272,7 @@ function atualizarHorariosDisponiveis() {
             gradeHorarios.style.display = "grid";
             gradeHorarios.innerHTML = "";
 
-            let horariosOcupados = [];
-            if (Array.isArray(dadosRetornados)) {
-                horariosOcupados = dadosRetornados
-                    .filter((item) => {
-                        if (typeof item === "object" && item !== null) {
-                            const statusStr = String(item.Status || "").trim().toUpperCase();
-                            return statusStr === "OK" || statusStr === "CONFIRMADO" || statusStr === "APROVADO" || statusStr === "SIM" || statusStr === "PENDENTE" || statusStr === "";
-                        }
-                        return true;
-                    })
-                    .map((item) => {
-                        const h = typeof item === "object" && item !== null ? item.Horario : item;
-                        return normalizarHora(h);
-                    });
-            }
+            const horariosOcupados = expandirHorariosOcupados(dadosRetornados);
 
             horariosBase.forEach((h) => {
                 const slot = document.createElement("div");

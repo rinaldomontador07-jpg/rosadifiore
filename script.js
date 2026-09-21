@@ -105,6 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const nome = document.getElementById("nome").value.trim();
             const whatsapp = document.getElementById("whatsapp").value.trim();
+            const bairro = document.getElementById("bairro") ? document.getElementById("bairro").value.trim() : "";
             const servico = document.getElementById("servico").value;
             const data = inputData.value;
 
@@ -114,6 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 Horario: horarioEscolhido,
                 Nome: nome,
                 WhatsApp: whatsapp,
+                Bairro: bairro,
                 Servico: servico,
                 Status: "Pendente"
             };
@@ -124,10 +126,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const mensagemWhatsApp = `Olá! Gostaria de confirmar meu agendamento pelo site Rosa di Fiore:
 *Nome:* ${nome}
+*WhatsApp:* ${whatsapp}
+*Bairro/Local:* ${bairro}
 *Serviço:* ${servico}
 *Data:* ${dataFormatada}
-*Horário:* ${horarioEscolhido}
-*WhatsApp:* ${whatsapp}`;
+*Horário:* ${horarioEscolhido}`;
 
             // Envio para o Google Apps Script CRM
             fetch(scriptURL, {
